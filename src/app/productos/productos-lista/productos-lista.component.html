@@ -1,0 +1,29 @@
+
+<h1>ProductosLista</h1>
+<div style="text-align: center" >
+<button (click) = "carrito()"  type="button" id="btCarrito" 
+class="btn btn-success btn-lg mt-2" data-toggle="modal" href="#" routerLink="/carrito" (click)="carrito" *ngIf="urlProducto">
+        Añadir al carrito </button>
+
+</div>
+<div  style="text-align: center" >
+<h1>Cantidad a pagar es = {{total}}</h1>
+</div>
+
+
+
+<app-productos-item
+*ngFor="let item of productos"
+[producto]='item'
+(Uncarrito)='carrito($event)'
+(borrarUnProducto)='borrarProducto($event)'
+(detalli)='detalle($event)'
+
+>
+</app-productos-item>
+
+<div style="text-align: center">
+        <button (click) = "carrito()"  type="button" id="btCarrito" 
+        class="btn btn-success btn-lg mt-2" data-toggle="modal" href="#" routerLink="/carrito" (click)="carrito" *ngIf="urlProducto">
+                Añadir al carrito </button>
+        </div>
